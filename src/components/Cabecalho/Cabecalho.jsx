@@ -1,5 +1,5 @@
-const Cabelhaco = () => {
-  return <div>Cabeçalho</div>;
+const Cabecalho = (props) => {
+  return <div>Bem-vindo, (props.username)</div>;
 };
 
-export { Cabelhaco }; //export nomeado
+export { Cabecalho }; //export nomeado
