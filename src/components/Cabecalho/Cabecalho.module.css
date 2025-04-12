@@ -1,0 +1,8 @@
+.Cabecalho {
+  background: var(--preto);
+  color: var(--cinza);
+}
+
+.Cabecalho h1 span {
+  color: var(--rosa);
+}
