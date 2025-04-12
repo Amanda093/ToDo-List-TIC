@@ -1,5 +1,6 @@
 const Cabecalho = (props) => {
-  return <div>Bem-vindo, (props.username)</div>;
+  const { username } = props;
+  return <div>Bem-vindo, {username}</div>;
 };
 
 export { Cabecalho }; //export nomeado
