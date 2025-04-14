@@ -1,4 +1,5 @@
 import { Cabecalho, Conteudo, Rodape } from "./components";
+import { Inicial } from "./pages"
 
 import "./App.css";
 
@@ -7,7 +8,7 @@ const App = () => {
     <>
       <Cabecalho username="Justine" />;
       <Conteudo>
-        <h1>Titulo</h1>
+        <Inicial />
       </Conteudo>
       <Rodape criador="Amanda" />
     </>
