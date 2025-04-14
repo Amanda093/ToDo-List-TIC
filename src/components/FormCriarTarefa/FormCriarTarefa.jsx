@@ -1,4 +1,4 @@
-import { Botao, CampoTexto  } from "../:/components";
+import { Botao, CampoTexto  } from "../../components";
 import style from "./FormCriarTarefa.module.css"
 
 const FormCriarTarefa = () => {
