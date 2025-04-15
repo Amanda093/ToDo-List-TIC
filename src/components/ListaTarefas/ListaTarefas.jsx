@@ -1,21 +1,18 @@
-import { Botao, TIPO_BOTAO } from "../../components";
 import style from "./ListaTarefas.module.css";
+import { ListaTarefasItem } from "./ListaTarefasItem";
 
 const ListaTarefas = () => {
+  const tarefas = [
+    { id: 1, nome: "Item 1" },
+    { id: 2, nome: "Item 2" },
+    { id: 3, nome: "Item 3" },
+  ];
+
   return (
     <ul className={style.ListaTarefas}>
-      <li>
-        Item 1
-        <Botao texto="-" tipo={TIPO_BOTAO.SECUNDARIO} />
-      </li>
-      <li>
-        Item 2
-        <Botao texto="-" tipo={TIPO_BOTAO.SECUNDARIO} />
-      </li>
-      <li>
-        Item 3
-        <Botao texto="-" tipo={TIPO_BOTAO.SECUNDARIO} />
-      </li>
+      {tarefas.map((item) => (
+        <ListaTarefasItem key={item.id} nome={item.nome} />
+      ))}
     </ul>
   );
 };
