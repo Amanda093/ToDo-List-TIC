@@ -36,9 +36,25 @@ export const AppContextProvider = (props) => {
     });
   };
 
+  //edit
+  const editarTarefa = (idTarefa, nomeTarefa) => {
+    setTarefas((estadoAtual) => {
+      const tarefasAtualizadas = estadoAtual.map((tarefa) => {
+        return tarefa.id == idTarefa
+          ? {
+              ...tarefa,
+              nome: nomeTarefa,
+            }
+          : tarefa;
+      });
+
+      return [...tarefasAtualizadas];
+    });
+  };
+
   return (
     <AppContext.Provider
-      value={{ criador, tarefas, adicionarTarefa, removerTarefa }}
+      value={{ criador, tarefas, adicionarTarefa, removerTarefa, editarTarefa }}
     >
       {children}
     </AppContext.Provider>
