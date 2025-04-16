@@ -13,6 +13,7 @@ export const AppContextProvider = (props) => {
     { id: 3, nome: "Item 3" },
   ]);
 
+  // create
   const adicionarTarefa = (nomeTarefa) => {
     setTarefas((estadoAtual) => {
       const tarefa = {
@@ -24,8 +25,21 @@ export const AppContextProvider = (props) => {
     });
   };
 
+  // delete
+  const removerTarefa = (idTarefa) => {
+    setTarefas((estadoAtual) => {
+      const tarefasAtualizadas = estadoAtual.filter(
+        (tarefa) => tarefa.id != idTarefa
+      );
+
+      return [...tarefasAtualizadas];
+    });
+  };
+
   return (
-    <AppContext.Provider value={{ criador, tarefas, adicionarTarefa }}>
+    <AppContext.Provider
+      value={{ criador, tarefas, adicionarTarefa, removerTarefa }}
+    >
       {children}
     </AppContext.Provider>
   );
